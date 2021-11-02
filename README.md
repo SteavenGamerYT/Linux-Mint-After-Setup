@@ -1,4 +1,4 @@
-# linuxmint
+# Linux Mint initial Setup
 Best Script to run after installing Linux Mint 20!
 
 
