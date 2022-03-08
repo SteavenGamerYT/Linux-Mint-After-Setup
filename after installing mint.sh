@@ -1,6 +1,13 @@
+echo Upgradeing your Mint to Steaven Mint
+echo removing blot not in steaven os
+sudo apt purge hexchat thunderbird celluloid hypnotix rhythmbox -y
 sudo dpkg --add-architecture i386
+echo updateing to lastest linux mint 20
 sudo apt update
+sudo apt upgrade -y
 sudo apt install apt wget gnupg2 git -y
+echo adding Steaven ppas
+sudo add-apt-repository ppa:libreoffice/ppa -y
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 sudo add-apt-repository ppa:lutris-team/lutris -y
@@ -14,7 +21,6 @@ wget -qO - https://packagecloud.io/shiftkey/desktop/gpgkey | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt purge firefox hexchat thunderbird celluloid hypnotix rhythmbox -y
 sudo apt-get update 
 sudo apt install --install-recommends winehq-stable -y
 sudo apt install google-chrome-stable vlc ubuntu-restricted-extras mint-meta-codecs steam lutris anydesk libreoffice default-jre github-desktop code -y
